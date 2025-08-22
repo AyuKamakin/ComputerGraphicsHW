@@ -1,4 +1,4 @@
-# ComputerGraphicsHW
+# Video Processer
 
 A small Python script for video processing. Created during the "Computer Graphics" course at HSE University.
 
