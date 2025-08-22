@@ -1,32 +1,29 @@
 # ComputerGraphicsHW
 
-Небольшой скрипт на Python для обработки видео. 
-Создан при прохождении курса "Компьютерная графика" при обучении в НИУ ВШЭ.
+A small Python script for video processing. Created during the "Computer Graphics" course at HSE University.
 
-Задача: дано видео со статичным фоном. В некоторые моменты в кадре появляются люди.
-Из видео надо в автоматическом режиме вырезать все кадры, на которых есть люди.
+Task: Given a video with a static background, people appear in some frames. The goal is to automatically remove all frames containing people.
 
-Описание скрипта:
-Он берёт исходный ролик, выбирает кадр-образец (на 2‑й секунде),  
-и сохраняет только те куски видео, где картинка не отличается от этого образца.  
-На выходе получается новое видео без лишних фрагментов.
+Script description:
+The script takes the original video, selects a reference frame (at the 2nd second), and keeps only the portions of the video that match this reference frame. The output is a new video without the unwanted fragments.
 
-## Зависимости
+## Dependencies
 ```bash
 pip install moviepy Pillow
 ```
 
-## Использование
-1. Положите файл `input.mp4` рядом со скриптом.
-2. Запустите:
-   ```bash
-   python main.py
-   ```
-3. Результат сохранится в `output.mp4`.
+## Usage
+1. Place the file `input.mp4` next to the script.
+2. Run:
+```bash
+python main.py
+```
+3. The result will be saved as `output.mp4`.
 
-В коде можно изменить имя входного и выходного файла, а также параметр `a` — шаг нарезки (по умолчанию 0.5 секунд). Чем меньше `a`, тем точнее сравнение, но дольше обработка.
+You can modify the input and output file names in the code, as well as the parameter `a` — the slicing step (default is 0.5 seconds). Smaller `a` means more precise comparison but longer processing time.
 
-## Пример работы
-- вход: `input.mp4`
-- эталонный кадр сохраняется в `ref.png`
-- выход: `output.mp4`
+## Example Output
+- Input: `input.mp4`
+- Reference frame saved as `ref.png`
+- Output: `output.mp4`
+
